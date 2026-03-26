@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Output, Input, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, EventEmitter, Output, Input, CUSTOM_ELEMENTS_SCHEMA, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DropdownManagerService } from '../../services/dropdown-manager.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-custom-calendar',
@@ -9,11 +11,13 @@ import { CommonModule } from '@angular/common';
   templateUrl: './custom-calendar.component.html',
   styleUrls: ['./custom-calendar.component.css']
 })
-export class CustomCalendarComponent {
+export class CustomCalendarComponent implements OnInit, OnDestroy {
   @Input() selectedDate: Date | null = null;
   @Output() dateSelected = new EventEmitter<Date>();
   
   isOpen = false;
+  private componentId = 'calendar-' + Math.random().toString(36).substr(2, 9);
+  private subscription?: Subscription;
   currentMonth: Date = new Date();
   weeks: (Date | null)[][] = [];
   
@@ -22,13 +26,29 @@ export class CustomCalendarComponent {
   
   dayNames = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 
+  constructor(private dropdownManager: DropdownManagerService) {}
+
   ngOnInit() {
     this.generateCalendar();
+    
+    // Subscribe to close all events
+    this.subscription = this.dropdownManager.closeAll$.subscribe(exceptId => {
+      if (exceptId !== this.componentId) {
+        this.isOpen = false;
+      }
+    });
+  }
+
+  ngOnDestroy() {
+    if (this.subscription) {
+      this.subscription.unsubscribe();
+    }
   }
 
   toggleCalendar() {
     this.isOpen = !this.isOpen;
     if (this.isOpen) {
+      this.dropdownManager.closeAllExcept(this.componentId);
       this.generateCalendar();
     }
   }

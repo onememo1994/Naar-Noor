@@ -23,7 +23,7 @@ Use this skill when:
 ## Project Overview
 
 **Project:** Naar & Noor - Authentic Himalayan Restaurant in Egypt
-**Tech Stack:** Angular 17 (Standalone Components), Tailwind CSS (CDN), TypeScript
+**Tech Stack:** Angular 17 (Standalone Components), Tailwind CSS (Local), TypeScript
 **Deployment:** Vercel (https://naar222noor.vercel.app)
 **Repository:** https://github.com/Mostafa-SAID7/Naar-Noor
 
