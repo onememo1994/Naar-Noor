@@ -189,6 +189,43 @@ We welcome contributions! Here's how to get started:
 
 ---
 
+**Ready to transform your business online?** [Contact We3ds Company](https://we3ds.com/)
+
+---
+
+## 🏢 About We3ds Company
+
+This project showcases the expertise of **[We3ds Company](https://we3ds.com/)** in delivering high-quality web development solutions.
+
+### 🚀 Our Expertise
+- **Frontend Development**: Angular, React, Vue.js with modern best practices
+- **Backend Development**: Node.js, .NET, PHP with scalable architectures  
+- **UI/UX Design**: Modern, responsive designs focused on user experience
+- **E-commerce Solutions**: Custom online stores and marketplace platforms
+- **Restaurant Websites**: Specialized in hospitality industry digital presence
+- **SEO Optimization**: Multi-language SEO and performance optimization
+- **PWA Development**: Progressive Web Apps for enhanced mobile experience
+
+### 🎯 Why Choose We3ds?
+- ✅ **Performance First**: Optimized for speed and user experience
+- ✅ **SEO Optimized**: Built for search engine visibility and ranking
+- ✅ **Mobile Responsive**: Perfect experience across all devices
+- ✅ **Modern Tech Stack**: Latest technologies and best practices
+- ✅ **Custom Solutions**: Tailored to your business needs
+- ✅ **Ongoing Support**: Maintenance and updates included
+
+### 📈 Project Results
+This Naar & Noor website demonstrates our capabilities:
+- **Performance**: 90+ Lighthouse score
+- **SEO**: Bilingual optimization for Egyptian market
+- **Bundle Size**: 55% reduction (9.6MB → 2.3MB)
+- **User Experience**: Custom components and smooth interactions
+- **Deployment**: Automated CI/CD with Vercel
+
+**Ready for your next project?** [Get in touch with We3ds](https://we3ds.com/)
+
+---
+
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -202,7 +239,13 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Location**: Cairo, Egypt
 - **Hours**: 12:00 PM - 11:00 PM (Closed Mondays)
 
-### 💻 Development Support
+### 💻 Development & Design
+**Developed by [We3ds Company](https://we3ds.com/)**
+- **Company Website**: [we3ds.com](https://we3ds.com/)
+- **Specialization**: Web Development, UI/UX Design, Digital Solutions
+- **Services**: Angular Development, Restaurant Websites, E-commerce Solutions
+
+### 🛠️ Technical Support
 - **Repository**: [github.com/Mostafa-SAID7/Naar-Noor](https://github.com/Mostafa-SAID7/Naar-Noor)
 - **Issues**: [Report bugs or request features](https://github.com/Mostafa-SAID7/Naar-Noor/issues)
 - **Discussions**: [Community discussions](https://github.com/Mostafa-SAID7/Naar-Noor/discussions)
@@ -211,6 +254,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
+- **Development**: Proudly developed by [We3ds Company](https://we3ds.com/) - Expert web development and digital solutions
 - **Design Inspiration**: Modern restaurant websites and Himalayan culture
 - **Icons**: [Iconify Design](https://iconify.design/) icon library
 - **Fonts**: [Google Fonts](https://fonts.google.com/) (Forum & Open Sans)
@@ -220,9 +264,11 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Made with ❤️ for authentic Himalayan cuisine lovers**
+**Made with ❤️ by [We3ds Company](https://we3ds.com/) for authentic Himalayan cuisine lovers**
 
 *Naar & Noor (نار ونور) - Where Fire Meets Flavor*
+
+**Professional Web Development • UI/UX Design • Digital Solutions**
 
 </div>
 
