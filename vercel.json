@@ -4,6 +4,9 @@
   "buildCommand": "npm run build:prod",
   "outputDirectory": "dist/lost-yeti",
   "framework": "angular",
+  "env": {
+    "NODE_ENV": "production"
+  },
   "rewrites": [
     {
       "source": "/(.*)",
@@ -46,6 +49,41 @@
           "value": "application/manifest+json"
         }
       ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/xml"
+        }
+      ]
+    },
+    {
+      "source": "/robots.txt",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "text/plain"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/naar2noor2(.*)",
+      "destination": "https://naar-noor.vercel.app$1",
+      "permanent": true
+    },
+    {
+      "source": "/naar2noor(.*)",
+      "destination": "https://naar-noor.vercel.app$1",
+      "permanent": true
+    },
+    {
+      "source": "/naar222noor(.*)",
+      "destination": "https://naar-noor.vercel.app$1",
+      "permanent": true
     }
   ]
 }
