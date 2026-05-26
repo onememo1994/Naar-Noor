@@ -1,6 +1,13 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { REVIEWS_DATA } from '../../../data/reviews.data';
+import { ApiService, Review } from '../../services/api.service';
+
+interface ReviewView {
+  text: string;
+  author: string;
+  rating: number;
+  source: string | null;
+}
 
 @Component({
   selector: 'app-reviews',
@@ -10,6 +17,28 @@ import { REVIEWS_DATA } from '../../../data/reviews.data';
   templateUrl: './reviews.component.html',
   styleUrls: ['./reviews.component.css']
 })
-export class ReviewsComponent {
-  reviews = REVIEWS_DATA;
+export class ReviewsComponent implements OnInit {
+  private readonly api = inject(ApiService);
+
+  reviews: ReviewView[] = [];
+  loading = true;
+  error = false;
+
+  ngOnInit(): void {
+    this.api.getReviews().subscribe({
+      next: (reviews: Review[]) => {
+        this.reviews = reviews.map(r => ({
+          text: r.comment,
+          author: r.customerName,
+          rating: r.rating,
+          source: r.source
+        }));
+        this.loading = false;
+      },
+      error: () => {
+        this.error = true;
+        this.loading = false;
+      }
+    });
+  }
 }

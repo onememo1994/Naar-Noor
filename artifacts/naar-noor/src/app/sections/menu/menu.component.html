@@ -5,7 +5,21 @@
       <h2 class="font-['Forum'] text-4xl md:text-5xl text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.5)]">Crafted With Passion</h2>
     </div>
 
-    <div class="space-y-10">
+    <div *ngIf="loading" class="space-y-10">
+      <div *ngFor="let i of [1,2,3,4,5]" class="animate-pulse">
+        <div class="flex items-baseline justify-between mb-2">
+          <div class="h-5 bg-white/10 rounded w-48"></div>
+          <div class="h-5 bg-white/10 rounded w-12"></div>
+        </div>
+        <div class="h-4 bg-white/5 rounded w-full"></div>
+      </div>
+    </div>
+
+    <div *ngIf="error" class="text-center py-12 text-neutral-500 text-sm">
+      Unable to load the menu right now. Please call us or visit in person.
+    </div>
+
+    <div *ngIf="!loading && !error" class="space-y-10">
       <div *ngFor="let item of menuItems" class="group">
         <div class="flex items-baseline justify-between mb-2">
           <h3 class="font-['Forum'] text-xl md:text-2xl text-white tracking-tight group-hover:text-[#C65A1E] transition-colors">
@@ -15,6 +29,10 @@
           <span class="font-['Forum'] text-xl text-white">{{ item.price }}</span>
         </div>
         <p class="text-sm text-neutral-200 font-light pr-12">{{ item.description }}</p>
+        <div *ngIf="item.isVegetarian || item.isVegan" class="mt-1.5 flex gap-2">
+          <span *ngIf="item.isVegan" class="text-[10px] tracking-widest uppercase text-[#C65A1E] font-medium">Vegan</span>
+          <span *ngIf="item.isVegetarian && !item.isVegan" class="text-[10px] tracking-widest uppercase text-emerald-500 font-medium">Vegetarian</span>
+        </div>
       </div>
     </div>
 
