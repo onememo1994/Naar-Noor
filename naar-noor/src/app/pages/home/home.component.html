@@ -1,10 +1,49 @@
 <app-hero></app-hero>
-<!-- Reservation card is now inside hero section -->
-<app-about></app-about>
-<app-category></app-category>
-<app-menu></app-menu>
-<app-cinematic-banner></app-cinematic-banner>
-<app-chefs></app-chefs>
-<app-reviews></app-reviews>
-<app-blog></app-blog>
-<app-locations></app-locations>
+
+@defer (on viewport) {
+  <app-about></app-about>
+} @placeholder {
+  <div class="h-32"></div>
+}
+
+@defer (on viewport) {
+  <app-category></app-category>
+} @placeholder {
+  <div class="h-24"></div>
+}
+
+@defer (on viewport) {
+  <app-menu></app-menu>
+} @placeholder {
+  <div class="h-64 bg-[#0d0d0d]"></div>
+}
+
+@defer (on viewport) {
+  <app-cinematic-banner></app-cinematic-banner>
+} @placeholder {
+  <div class="h-40"></div>
+}
+
+@defer (on viewport) {
+  <app-chefs></app-chefs>
+} @placeholder {
+  <div class="h-64"></div>
+}
+
+@defer (on viewport) {
+  <app-reviews></app-reviews>
+} @placeholder {
+  <div class="h-48 bg-[#0d0d0d]"></div>
+}
+
+@defer (on viewport) {
+  <app-blog></app-blog>
+} @placeholder {
+  <div class="h-40"></div>
+}
+
+@defer (on viewport) {
+  <app-locations></app-locations>
+} @placeholder {
+  <div class="h-40"></div>
+}
